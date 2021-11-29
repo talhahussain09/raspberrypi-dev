@@ -25,7 +25,7 @@ ScanUtility.hci_enable_le_scan(sock)
 try:
 	while True:
 		returnedList = ScanUtility.parse_events(sock, 10)
-        client.publish('raspberry/topic', payload=returnedList, qos=0, retain=False)
+        	client.publish('raspberry/topic', payload=returnedList, qos=0, retain=False)
 			
 		for item in returnedList:
 			print(item)
